@@ -1,0 +1,54 @@
+Data Types: Integer, Floating, String, Boolean
+Data Structures:
+  List: [1,2,3]
+    Index a[1]
+    slice a[:2]
+    .append()
+    .pop()
+    .sort()
+    .reverse()
+  Dictionary: {'1':1,'2':2}
+    .pop()
+    a['3':3]
+    d.values
+  Tuples
+    Immutable lists
+    only uses .count and .index
+  set
+    Doesn't repeat
+    a={1,2,3}
+    a=set('list')
+    .add()
+    .remove()
+    .pop()
+  Text Files
+    myfile.read()
+    myfile.seek(0)
+    myfile.readline()
+    myfile.close()
+  Control Flow
+    if elif else
+  For Loop
+    iterable: can be "worked through"
+    x+=1 --> x=x+1
+  While loops
+    break: breaks out of loop
+    continue: goes to top of loops
+    pass: does  nothing
+  Useful Operators
+    range([start,stop,step])
+    enumerate: index count
+    '\n': escape function
+    zip: zips lists into tuples (opposite of enumerate)
+    'in' to check if value is in list
+    min/max: min/max of list
+    from _(random) import _(ex. shuffle,randint)
+    input
+    int(variable) or any other data type
+  List comprehension
+    mylist=[]
+    for x in [2,4,6]
+      for y in [100,200,300]
+        mylist.append(x*y)
+    mylist=[x*y for x in [2,4,6] for y in [100,200,300]]
+  Methods/Functions
