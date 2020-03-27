@@ -8,28 +8,20 @@ def display_board(board):
 
 def win(player):
     if user_board[4]==player and user_board[5]==player and user_board[6]==player:
-        print('you won!')
         return True
     elif user_board[1]==player and user_board[2]==player and user_board[3]==player:
-        print('you won!')
         return True
     elif user_board[7]==player and user_board[8]==player and user_board[9]==player:
-        print('you won!')
         return True
     elif user_board[1]==player and user_board[4]==player and user_board[7]==player:
-        print('you won!')
         return True
     elif user_board[2]==player and user_board[5]==player and user_board[8]==player:
-        print('you won!')
         return True
     elif user_board[3]==player and user_board[6]==player and user_board[9]==player:
-        print('you won!')
         return True
     elif user_board[1]==player and user_board[5]==player and user_board[9]==player:
-        print('you won!')
         return True
     elif user_board[3]==player and user_board[5]==player and user_board[7]==player:
-        print('you won!')
         return True
     else:
         return False
@@ -68,9 +60,11 @@ player1=player1.upper()
 while ' ' in user_board:
     position(player1)
     if win(player1)==True:
+        print('You Won!')
         break
     position(player2)
     if win(player2)==True:
+        print('You Won!')
         break
 if ' ' not in user_board:
     print('It was a tie!')
