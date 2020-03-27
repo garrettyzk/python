@@ -5,14 +5,46 @@ def display_board(board):
     print(board[4]+'|'+board[5]+'|'+board[6])
     print('- - -')
     print(board[7]+'|'+board[8]+'|'+board[9])
+
+def win(player):
+    if user_board[4]==player and user_board[5]==player and user_board[6]==player:
+        print('you won!')
+        return True
+    elif user_board[1]==player and user_board[2]==player and user_board[3]==player:
+        print('you won!')
+        return True
+    elif user_board[7]==player and user_board[8]==player and user_board[9]==player:
+        print('you won!')
+        return True
+    elif user_board[1]==player and user_board[4]==player and user_board[7]==player:
+        print('you won!')
+        return True
+    elif user_board[2]==player and user_board[5]==player and user_board[8]==player:
+        print('you won!')
+        return True
+    elif user_board[3]==player and user_board[6]==player and user_board[9]==player:
+        print('you won!')
+        return True
+    elif user_board[1]==player and user_board[5]==player and user_board[9]==player:
+        print('you won!')
+        return True
+    elif user_board[3]==player and user_board[5]==player and user_board[7]==player:
+        print('you won!')
+        return True
+    else:
+        return False
+
 def position(player):
     if ' ' not in user_board:
         return None
-    move=int(input('What position would you like to go to?'))
-    while move>9 or move<1 or move is '':
+    while True:
         move=int(input('What position would you like to go to?'))
-    while user_board[move] != ' ':
-        move=int(input('What position would you like to go to?'))
+        if move>9 or move<1 or move is '':
+            pass
+        elif user_board[move] != ' ':
+            pass
+        else:
+            break
     user_board[move]=player
     return display_board(user_board)
 
@@ -35,4 +67,10 @@ player1=player1.upper()
 
 while ' ' in user_board:
     position(player1)
+    if win(player1)==True:
+        break
     position(player2)
+    if win(player2)==True:
+        break
+if ' ' not in user_board:
+    print('It was a tie!')
